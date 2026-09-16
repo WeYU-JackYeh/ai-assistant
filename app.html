@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Assistant</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="brand-mark">AI</div>
+          <div>
+            <h1>Assistant</h1>
+          </div>
+        </div>
+
+        <nav class="nav">
+          <button class="nav-item active">聊天</button>
+          <button class="nav-item">任務</button>
+          <button class="nav-item">設定</button>
+        </nav>
+      </aside>
+
+      <main class="chat-panel">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">AI 助理</p>
+            <h2>智慧助手</h2>
+          </div>
+          <div class="topbar-actions">
+            <span id="welcome-user" class="welcome-user">使用者</span>
+            <button class="primary-btn" id="logout-btn" type="button">登出</button>
+          </div>
+        </header>
+
+        <section id="messages" class="messages" aria-live="polite">
+          <article class="message bot">
+            <div class="avatar">A</div>
+            <div class="bubble">
+              <p>你好！我可以協助你整理資訊、生成內容或回答問題。</p>
+            </div>
+          </article>
+        </section>
+
+        <form id="chat-form" class="composer">
+          <input
+            id="prompt-input"
+            type="text"
+            placeholder="輸入訊息..."
+            aria-label="輸入訊息"
+          />
+          <button type="submit" class="send-btn">送出</button>
+        </form>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
